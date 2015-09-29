@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CalcX</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="RestrauntType">Restaurant Type</string>
+    <string name="RestrauntTaxCalculator">Restaurant Tax Calculator</string>
+    <string name="Calculate">Calculate</string>
+    <string name="BillAmount">Bill Amount</string>
+    <string name="ST">Service Charge</string>
+    <string name="SC">Service Tax</string>
+    <string name="VT">VAT</string>
+    <string name="AC">AC</string>
+    <string name="NonAC">NonAc</string>
+
+</resources>
