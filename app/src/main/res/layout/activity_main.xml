@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg_p"
     android:icon="@drawable/ic_launcher"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -20,7 +20,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="35dp"
-        android:textColor="#ff1f1a" />
+        android:textStyle="bold"
+     
+        android:textColor="#11103f" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -30,7 +32,7 @@
         android:layout_alignEnd="@+id/textView1"
         android:id="@+id/T_1"
         android:weightSum="1"
-        android:textColor="#ff1f1a" >
+        android:textColor="#160e0e" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,7 +41,8 @@
             android:text="@string/RestrauntType"
             android:id="@+id/textView2"
             android:layout_marginTop="24dp"
-            android:textColor="#ff1f1a" />
+            android:textStyle="bold"
+            android:textColor="#160e0e" />
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -48,23 +51,25 @@
             android:layout_marginTop="24dp"
             android:id="@+id/Rtype"
             android:orientation="horizontal"
-            android:textColor="#ff1f1a" >
+            android:textColor="#160e0e" >
             <RadioButton android:id="@+id/AC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/AC"
+                android:textStyle="bold"
                 android:layout_marginLeft="5dp"
                 android:onClick="onRadioButtonClicked"
                 android:checked="false"
-                android:textColor="#ff1f1a" />
+                android:textColor="#160e0e" />
             <RadioButton android:id="@+id/NonAC"
                 android:layout_width="wrap_content"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="@string/NonAC"
                 android:onClick="onRadioButtonClicked"
                 android:checked="false"
-                android:textColor="#ff1f1a" />
+                android:textColor="#160e0e" />
         </RadioGroup>
 
  </TableRow>
@@ -78,9 +83,10 @@
      android:layout_centerVertical="true"
      android:layout_alignParentLeft="true"
      android:layout_alignParentStart="true"
+     android:textStyle="bold"
      android:layout_below="@id/T_1"
      android:layout_marginTop="22dp"
-     android:textColor="#ff1f1a" />
+     android:textColor="#160e0e" />
 
  <Button
      android:layout_width="wrap_content"
@@ -89,40 +95,74 @@
      android:id="@+id/button3"
      android:layout_below="@+id/BillAmount"
      android:layout_centerHorizontal="true"
+     android:textStyle="bold"
      android:layout_marginTop="30dp"
-     android:textColor="#ff1f1a" />
+     android:textColor="#160e0e" />
 
  <TableLayout
      android:layout_width="match_parent"
      android:layout_below="@id/button3"
      android:orientation="horizontal"
      android:id="@+id/T_2"
+     android:textStyle="bold"
      android:layout_alignParentBottom="true"
      android:layout_height="wrap_content"
-     android:textColor="#ff1f1a" >
+     android:textColor="#160e0e" >
 
      <TableRow
          android:layout_width="match_parent"
          android:layout_height="match_parent"
-         android:textColor="#ff1f1a" >
+         android:textStyle="bold"
+         android:textColor="#160e0e" >
 
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textStyle="bold"
+             android:textAppearance="?android:attr/textAppearanceLarge"
+             android:id="@+id/FB"
+             android:layout_column="1"
+             android:text="@string/FB"
+             android:textColor="#160e0e" />
+
+         <EditText
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:inputType="numberDecimal"
+             android:textStyle="bold"
+             android:background="@color/blueish"
+             android:ems="10"
+             android:id="@+id/FB2"
+             android:layout_column="6"
+             android:textColor="#160e0e" />
+     </TableRow>
+
+     <TableRow
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:textStyle="bold"
+         android:textColor="#160e0e" >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textStyle="bold"
              android:textAppearance="?android:attr/textAppearanceLarge"
              android:id="@+id/ST"
              android:layout_column="1"
              android:text="@string/ST"
-             android:textColor="#ff1f1a" />
+             android:textColor="#160e0e" />
 
          <EditText
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:inputType="numberDecimal"
+             android:background="@color/blueish"
+             android:textStyle="bold"
              android:ems="10"
              android:id="@+id/SC2"
              android:layout_column="6"
-             android:textColor="#ff1f1a" />
+             android:textColor="#160e0e" />
      </TableRow>
 
      <TableRow
@@ -132,20 +172,23 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textStyle="bold"
              android:textAppearance="?android:attr/textAppearanceLarge"
              android:text="@string/SC"
              android:id="@+id/SC"
              android:layout_column="1"
-             android:textColor="#ff1f1a" />
+             android:textColor="#160e0e" />
 
          <EditText
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textStyle="bold"
              android:inputType="numberDecimal"
+             android:background="@color/blueish"
              android:ems="10"
              android:id="@+id/ST2"
              android:layout_column="6"
-             android:textColor="#ff1f1a" />
+             android:textColor="#160e0e" />
      </TableRow>
 
      <TableRow
@@ -155,20 +198,23 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textStyle="bold"
              android:textAppearance="?android:attr/textAppearanceLarge"
              android:text="@string/VT"
              android:id="@+id/vt"
              android:layout_column="1"
-             android:textColor="#ff1f1a" />
+             android:textColor="#160e0e" />
 
          <EditText
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textStyle="bold"
              android:inputType="numberDecimal"
+             android:background="@color/blueish"
              android:ems="10"
              android:id="@+id/vt2"
              android:layout_column="6"
-             android:textColor="#ff1f1a" />
+             android:textColor="#160e0e" />
      </TableRow>
 
 
@@ -181,10 +227,12 @@
      android:inputType="numberDecimal"
      android:ems="10"
      android:id="@+id/AmountInput"
+     android:background="@color/blueish"
      android:layout_alignBottom="@+id/BillAmount"
+     android:textStyle="bold"
      android:layout_alignLeft="@+id/button3"
      android:layout_alignStart="@+id/button3"
-     android:textColor="#ff1f1a" />
+     android:textColor="#160e0e" />
 
 
 </RelativeLayout>

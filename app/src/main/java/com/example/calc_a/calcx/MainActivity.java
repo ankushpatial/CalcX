@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText e_bill;
     RadioGroup rgb_RsType;
     Button   b_result;
-    TextView t_st, t_sc, t_vat;
+    TextView t_st, t_sc, t_vat,t_fb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         b_result = (Button)findViewById(R.id.button3);
 
+        t_fb = (TextView)findViewById(R.id.FB2);
         t_st = (TextView)findViewById(R.id.ST2);
         t_sc = (TextView)findViewById(R.id.SC2);
         t_vat = (TextView)findViewById(R.id.vt2);
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     double n2 = 0;
                     double n3 = 0;
                     double n4 = 0;
-                    double temp = 0;
+                    double n5 = 0;
+                    //double temp = 0;
                     // get selected radio button from radioGroup
                     int selectedId = rgb_RsType.getCheckedRadioButtonId();
 
@@ -58,15 +60,17 @@ public class MainActivity extends AppCompatActivity {
                     {
                         case R.id.AC:
                             Log.v(LOG_TAG, "AC button clicked");
-                            temp = n1 / 1.31384;
-                            n2 = temp / 10;
-                            n4 = (temp + n2) * 0.145;
-                            n3 = ((temp + n2) * 0.4) * 0.1236;
+                            n2=n1*.07616;
+                            n3=n1*.04138;
+                            n4=n1*.1214;
+                            n5=n1*.7611;
                             break;
                         case R.id.NonAC:
                             Log.v(LOG_TAG, "NonAC button clicked");
-
+                            n2=n1*.07939;
+                            n4=n1*.12663;
                             n3 = 0;
+                            n5=n1*.7939;
                           // Ninjas rule
                             break;
                     }
@@ -76,11 +80,10 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
 
-
-
                     t_sc.setText(String.format(" %.2f", n2));
                     t_st.setText(String.format(" %.2f", n3));
                     t_vat.setText(String.format(" %.2f", n4));
+                    t_fb.setText(String.format(" %.2f", n5));
 
 
                 }  catch (Exception e) {
@@ -125,7 +128,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            //return true;
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
